@@ -1,0 +1,12 @@
+.Dropdown {
+    background-color: inherit;
+    border: 1px solid #f2f2f2;
+    border-radius: 2%;
+    color: #f2f2f2af;
+    width: 100px;
+    height: 40px;
+    position: relative; /* or use absolute positioning if needed */
+    top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Example box shadow */
+  }
+  

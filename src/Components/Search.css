@@ -8,9 +8,9 @@
         background-color: inherit;
         box-sizing: border-box;  
         font-size: 18px;
-        
+        margin-top: -400px;
     }
 
     .SearchBar::placeholder {
-        color: #f2f2f2;
+        color: #f2f2f2af;
     }
