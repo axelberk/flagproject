@@ -9,7 +9,7 @@ const Navbar = () => {
             <img className="Logo" src="/logo.png" alt="" />
             <button>
                 <Brightness7SharpIcon className="bright-icon"></Brightness7SharpIcon>Dark Mode
-                </button>
+            </button>
         </div>
     )
 }
