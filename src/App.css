@@ -1,15 +1,30 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+  
+  .Navbar {
+    flex: 0 0 auto;
+  }
+
+  .HomePage {
+    flex: 1 1 auto;
+    overflow: auto;
+  }
 
   html, body {
-    
+    width: 100%;
+    height: 100%;
     margin: 0;
   }
   
   #root {
     height: 100%;
     width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 2rem;
+    
+    
+    
     text-align: center;
   }
 

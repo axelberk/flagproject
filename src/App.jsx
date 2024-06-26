@@ -10,11 +10,13 @@ function App() {
 
   return (
     <>
-      <Navbar/>
-      
+    <div className='App'>
+    <Navbar/>
       <HomePage>
         <Search/>
       </HomePage>
+    </div>
+    
       
      
       

@@ -2,7 +2,7 @@ import "./Search.css"
 
 const Search = () => {
     return (
-        <div className="SearchBar">Search</div>
+        <input className="SearchBar" placeholder="Search for a country"/>
     )
 }
 
