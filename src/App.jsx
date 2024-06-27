@@ -5,6 +5,7 @@ import Navbar from "./Components/Navbar"
 import HomePage from './Components/HomePage'
 import Search from './Components/Search'
 import Dropdown from "./Components/Dropdown"
+import CountryCard from './Components/CountryCard'
 
 function App() {
   
@@ -16,6 +17,7 @@ function App() {
       <HomePage>
         <Search/>
         <Dropdown />
+        <CountryCard />
       </HomePage>
     </div>
     
