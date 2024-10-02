@@ -1,5 +1,5 @@
     .SearchBar {
-        border: 1px solid #f2f2f2;
+        border: 1px solid #f2f2f288;
         color: #f2f2f2;
         width: 295px;
         height: 40px;
@@ -12,5 +12,10 @@
     }
 
     .SearchBar::placeholder {
-        color: #f2f2f2af;
+        color: #f2f2f288;
     }
+
+    .SearchBar:hover {
+        border: 1px solid #f2f2f2;;
+    }
+    
