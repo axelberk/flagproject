@@ -2,7 +2,12 @@ import "./Search.css"
 
 const Search = () => {
     return (
-        <input className="SearchBar" placeholder="Search for a country"/>
+        <div className="inputContainer">
+            <input type="text" id="search" className="SearchBar" placeholder=" "/>
+            <label className="SearchLabel" htmlFor="search">Search for a country...</label>
+            
+        </div>
+        
     )
 }
 
