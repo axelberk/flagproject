@@ -1,7 +1,7 @@
 .inputContainer {
     position: relative;
     width: 295px;
-    margin-top: -400px;
+    margin-top: -480px;
 }
 
 .SearchBar {
@@ -10,12 +10,12 @@
     width: 100%;
     height: 40px;
     border-radius: 4px;
-    padding: 12px 10px 10px 10px;
+    padding: 24px;
+    padding-left: 12px;
     background-color: inherit;
     box-sizing: border-box;
     font-size: 14px;
     position: relative;
-    
 }
 
 .SearchBar::placeholder {
@@ -24,8 +24,8 @@
 
 .SearchLabel {
     position: absolute;
-    top: 8px;
-    left: 10px;
+    top: 12px;
+    left: 8px;
     color: #f2f2f288;
     font-size: 16px;
     pointer-events: none;

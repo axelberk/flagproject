@@ -25,6 +25,15 @@ button {
 button:hover {
    background-color: rgb(255, 255, 255, 0.08);
    border: none;
+   padding: 10px 20px;
+   margin: 0px;
+}
+
+button:focus {
+    outline: none !important; 
+    border: none !important; 
+    box-shadow: none !important; 
+    padding: 10px 20px;
 }
 
 .bright-icon {
