@@ -1,5 +1,8 @@
 .inputContainer {
+    position: relative;
+    width: 295px;
     
+    margin-left: 0px;
 }
 
 .SearchBar {

@@ -1,9 +1,9 @@
- /* .dropdownContainer {
+ .dropdownContainer {
     position: relative;
-    margin-top: -500px;
+    padding-bottom: 0px;
   
  }
-  */
+ 
  .Dropdown {
     background-color: inherit;
     border: 1px solid #f2f2f288;
@@ -12,7 +12,7 @@
     width: 150px;
     height: 40px;
     position: relative; 
-    top: 20px;
+    
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     font-size: 18px;
     text-align: start;
