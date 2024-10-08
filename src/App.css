@@ -1,74 +1,75 @@
 .App {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
+}
+
+.Navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.HomePage {
+  flex: 1;
+  padding-top: 80px;
+  background-color: #202c36;
+  box-sizing: border-box;
 }
 
 .filter-section {
   display: flex;
-  justify-content: space-around;
-  gap: 350px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
   width: 100%;
+  padding: 20px;
   box-sizing: border-box;
-  margin-top: none;
+  flex-wrap: wrap;
+  margin-top: 40px;
 }
-  
-  .Navbar {
-    flex: 0 0 auto;
-  }
-
-  .HomePage {
-    flex: 1 1 auto;
-    overflow: auto;
-  }
 
   html, body {
     width: 100%;
     height: 100%;
     margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #202c36;
+    color: #f2f2f2;
+    text-align: center;
   }
   
   #root {
     height: 100%;
     width: 100%;
-    
-    
-    
     text-align: center;
   }
 
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
+  button {
+    background-color: #2b3844;
+    color: white;
+    border: none;
   }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  .logo.react:hover {
-    filter: drop-shadow(0 0 2em #61dafbaa);
+  
+  button:hover {
+    background-color: rgba(255, 255, 255, 0.08);
   }
 
-  @keyframes logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+  button:focus {
+    outline: none;
+    box-shadow: none;
   }
 
-  @media (prefers-reduced-motion: no-preference) {
-    a:nth-of-type(2) .logo {
-      animation: logo-spin infinite 20s linear;
+  
+  @media (max-width: 768px) {
+    .filter-section {
+      flex-direction: column;
+      gap: 10px
     }
   }
+  
 
-  .card {
-    padding: 2em;
-  }
-
-  .read-the-docs {
-    color: #888;
-  }
+  
