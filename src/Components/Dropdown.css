@@ -15,8 +15,14 @@
     padding-right: 4px;
  }
   
+ .Dropdown option {
+  background-color: #202c36;
+  color: #f2f2f2;
+ }
+
   .Dropdown:hover {
     border: 1px solid #f2f2f2;
+    background-color: ;
   }
 
   .dropdownLabel {
