@@ -3,8 +3,8 @@ import "./Dropdown.css"
 const Dropdown = () => {
     return (
         <div className="dropdownContainer">
-            <label htmlFor="region" className="dropdownLabel">Region</label>
-            <select id="region" className="Dropdown">
+            <select id="region" className="Dropdown" required>
+                <option value=""></option>
                 <option value="all">All</option>
                 <option value="africa">Africa</option>
                 <option value="americas">Americas</option>
@@ -13,6 +13,7 @@ const Dropdown = () => {
                 <option value="oceania">Oceania</option>
 
             </select>
+            <label htmlFor="region" className="dropdownLabel">Region</label>
         </div>
         
     )

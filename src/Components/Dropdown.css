@@ -1,5 +1,6 @@
  .dropdownContainer {
     width: 150px;
+    position: relative;
  }
  
  .Dropdown {
@@ -10,7 +11,7 @@
     height: 40px;
     border-radius: 4px;
     font-size: 18px;
-    padding-left: 4px;
+    padding-left: 8px;
     padding-right: 4px;
  }
   
@@ -20,16 +21,20 @@
 
   .dropdownLabel {
     position: absolute;
-    top: 12px;
-    left: 12px;
-    color: #f2f2f288;
+    top: 8px;
+    left: 8px;
+    color: #f2f2f2;
     transition: 0.3s ease;
+    background-color: inherit;
+    padding: 0 4px;
+    pointer-events: none;
   }
 
   .Dropdown:focus + .dropdownLabel,
-  .Dropdown:not([value=""]) + .dropdownLabel {
+  .Dropdown:valid + .dropdownLabel {
     top: -10px;
     font-size: 12px;
     color: #f2f2f2;
     background-color: #202c36;
+    z-index: 1;
   }

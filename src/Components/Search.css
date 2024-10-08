@@ -12,6 +12,7 @@
     padding: 22px;
     background-color: inherit;
     box-sizing: border-box;
+    padding-left: 12px;
 }
 
 .SearchBar::placeholder {
@@ -22,11 +23,11 @@
     position: absolute;
     top: 12px;
     left: 8px;
-    color: #f2f2f288;
+    color: #f2f2f2;
     font-size: 16px;
     pointer-events: none;
     transition: 0.3s ease;
-    padding: 0 5px; 
+    padding: 0px 4px; 
 }
 
 .SearchBar:focus + .SearchLabel,
