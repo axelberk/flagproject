@@ -1,46 +1,41 @@
- .dropdownContainer {
-    width: 150px;
-    position: relative;
- }
- 
- .Dropdown {
-    background-color: inherit;
-    border: 1px solid #f2f2f288;
-    color: #f2f2f2af;
-    width: 100%;
-    height: 40px;
-    border-radius: 4px;
-    font-size: 18px;
-    padding-left: 8px;
-    padding-right: 4px;
- }
-  
- .Dropdown option {
+.customDropdown {
+  position: relative;
+  width: 150px;
+  border: 1px solid #f2f2f2;
   background-color: #202c36;
   color: #f2f2f2;
- }
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+}
 
-  .Dropdown:hover {
-    border: 1px solid #f2f2f2;
-    background-color: ;
-  }
+.selectedOption {
+  padding: 10px;
+  background-color: inherit;
+  text-align: left;
+}
 
-  .dropdownLabel {
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    color: #f2f2f2;
-    transition: 0.3s ease;
-    background-color: inherit;
-    padding: 0 4px;
-    pointer-events: none;
-  }
+.dropdownOptions {
+  display: none; 
+  position: absolute;
+  width: 100%;
+  background-color: #202c36;
+  border: 1px solid #f2f2f2;
+  z-index: 10;
+}
 
-  .Dropdown:focus + .dropdownLabel,
-  .Dropdown:valid + .dropdownLabel {
-    top: -10px;
-    font-size: 12px;
-    color: #f2f2f2;
-    background-color: #202c36;
-    z-index: 1;
-  }
+.customDropdown:hover .dropdownOptions {
+  display: block; /* Show options on hover */
+}
+
+.option {
+  padding: 10px;
+  background-color: #2B3844;
+  color: #f2f2f2;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #f2f2f288; /* Change background color on hover */
+  color: #ffffff; /* Change text color on hover */
+}
