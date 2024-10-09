@@ -9,10 +9,34 @@ const Dropdown = () => {
   };
 
   return (
-    <FormControl variant="outlined" sx={{ minWidth: 150, position: 'relative' }}>
+    <FormControl
+      variant="outlined"
+      sx={{ 
+        minWidth: 150, 
+        position: 'relative', 
+        marginRight: '5px', 
+        '& .MuiOutlinedInput-root': {
+          '& fieldset': {
+            borderColor: '#f2f2f288',
+          },
+          '&:hover fieldset': {
+            borderColor: '#f2f2f2', 
+          },
+          '&.Mui-focused fieldset': {
+            borderColor: '#f2f2f2', 
+          },
+        },
+      }}
+    >
       <InputLabel 
         id="region-label" 
-        sx={{ color: selectedOption ? '#f2f2f2' : '#f2f2f288' }}>
+        sx={{ 
+          color: selectedOption ? '#f2f2f2' : '#f2f2f288', 
+          '&.Mui-focused': {
+            color: '#f2f2f2',
+          },
+        }}
+      >
         Region
       </InputLabel>
       <Select
@@ -39,19 +63,11 @@ const Dropdown = () => {
         sx={{
           backgroundColor: '#202c36',
           color: '#f2f2f2',
-          border: '1px solid #f2f2f288',
-          '&:hover': {
-            borderColor: '#f2f2f2',
-          },
-          '&.Mui-focused': {
-            borderColor: '#f2f2f2', 
-            boxShadow: 'none',
-          },
           '& .MuiSelect-icon': {
             color: '#f2f2f2',
           },
-          '& .MuiOutlinedInput-notchedOutline': {
-            borderColor: '#f2f2f288', 
+          '& .MuiSelect-select': {
+            textAlign: 'left',
           },
         }}
       >
