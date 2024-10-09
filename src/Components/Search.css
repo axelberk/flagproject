@@ -13,6 +13,7 @@
     background-color: inherit;
     box-sizing: border-box;
     padding-left: 12px;
+    transition: border 0.3s ease;
 }
 
 .SearchBar::placeholder {
