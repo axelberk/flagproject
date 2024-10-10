@@ -6,18 +6,40 @@ export default function Search() {
   return (
     <Box
       component="form"
-      sx={{ '& > :not(style)': { m: 1, width: '400px', border: '1px solid #f2f2f288',
-        '& MuiOutlinedInput-root' : {
-            '&fieldset': {
-                borderColor: '#f2f2f2'
-                
-            }
+      sx={{ 
+        '& > :not(style)': { 
+          
+          width: '380px', 
+          '& .MuiOutlinedInput-root': {
+            '& fieldset': {
+              borderColor: '#f2f2f288',
+            },
+            '&:hover fieldset': {
+              borderColor: '#f2f2f2',
+            },
+            '&.Mui-focused fieldset': {
+              borderColor: '#f2f2f2',
+            },
+          },
         }
-       } }}
+      }}
       noValidate
       autoComplete="off"
     >
-      <TextField id="outlined-basic" label="Search for a country..." variant="outlined" />
+      <TextField 
+        id="outlined-basic" 
+        label="Search for a country..." 
+        variant="outlined" 
+        sx={{
+          input: { color: '#f2f2f2' }, 
+          '& .MuiInputLabel-root': { 
+            color: '#f2f2f288', 
+          },
+          '& .MuiInputLabel-root.Mui-focused': {
+            color: '#f2f2f2', 
+          },
+        }}
+      />
     </Box>
   );
 }
