@@ -15,14 +15,15 @@ function App() {
     <div className='App'>
       <Navbar/>
       <HomePage>
-        <div className='filter-container'>
-          <Search/>
-          <Dropdown />
-        </div>
+        <div className='main-container'>
+          <div className='filter-container'>
+            <Search />
+            <Dropdown />
         
-        <div className='card-container'>
+          </div>
           <CountryCard />
         </div>
+        
         
       </HomePage>
     </div>
