@@ -6,21 +6,6 @@
   margin-right: -5px;
 }
 
-.Navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
-}
-
-.HomePage {
-  flex: 1;
-  padding-top: 80px;
-  background-color: #202c36;
-  box-sizing: border-box;
-}
-
 .main-container {
   max-width: 100%;
   margin-top: 30px;
@@ -35,10 +20,6 @@
   gap: 20px;
   padding: 20px 175px;
   box-sizing: border-box;
-}
-
-.Dropdown {
-  flex: 0 0 auto;
 }
 
   html, body {
@@ -58,21 +39,6 @@
     text-align: center;
   }
 
-  button {
-    background-color: #2b3844;
-    color: white;
-    border: none;
-  }
-  
-  button:hover {
-    background-color: rgba(255, 255, 255, 0.08);
-    border-radius: 4px;
-  }
-
-  button:focus {
-    outline: none;
-    box-shadow: none;
-  }
   
   @media (max-width: 768px) {
     .filter-container {
