@@ -1,4 +1,6 @@
 import React from 'react'
+import ReactDOM from "react-dom/client"
+import { BrowserRouter as Routes, Route, Router, BrowserRouter } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import './App.css'
 import Navbar from "./Components/Navbar"
@@ -11,27 +13,28 @@ function App() {
   
 
   return (
-    <>
-    <div className='App'>
-      <Navbar/>
-      <HomePage>
-        <div className='main-container'>
-          <div className='filter-container'>
-            <Search />
-            <Dropdown />
-        
+    <BrowserRouter>
+      <div className='App'>
+        <Navbar/>
+        <HomePage>
+          <div className='main-container'>
+            <div className='filter-container'>
+              <Search />
+              <Dropdown />
+          
+            </div>
+            <CountryCard />
           </div>
-          <CountryCard />
-        </div>
-        
-        
-      </HomePage>
-    </div>
+          
+          
+        </HomePage>
+      </div>
+    </BrowserRouter>
     
       
      
       
-    </>
+    
   )
 }
 
