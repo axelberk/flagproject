@@ -14,7 +14,7 @@
     padding: 0px 200px;
 }
 
-button {
+.light-dark {
     border: none;
     display: flex;
     align-items: center;

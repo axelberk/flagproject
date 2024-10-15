@@ -1,0 +1,14 @@
+.CountryPage {
+    max-width: 100%;
+    background-color: inherit;
+}
+
+.back-section {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.back-button {
+    color: white;
+    margin-top: 100px;
+}

@@ -7,7 +7,7 @@ const Navbar = () => {
         <div className="Navbar">
             <a href="/" className="NavbarLink">Countries of the World</a>
             <img className="Logo" src="/logo.png" alt="" />
-            <button>
+            <button className="light-dark">
                 <Brightness7SharpIcon className="bright-icon"></Brightness7SharpIcon>Dark Mode
             </button>
         </div>
