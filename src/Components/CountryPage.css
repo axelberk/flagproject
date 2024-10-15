@@ -1,14 +1,23 @@
 .CountryPage {
+    display: flex;
+    justify-content: space-between;
     max-width: 100%;
     background-color: inherit;
+    height: 100%;
+    margin-top: 60px;
+    padding: 20px;
+    text-align: left;
 }
 
 .back-section {
-    display: flex;
-    justify-content: flex-start;
+    margin-bottom: 20px;
 }
 
 .back-button {
-    color: white;
+    color: #ffffff;
     margin-top: 100px;
+    background-color: inherit;
+    outline: none !important;
+    box-shadow: none !important;
+    border: 0 !important; 
 }
