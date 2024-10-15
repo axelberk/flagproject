@@ -1,23 +1,53 @@
 .CountryPage {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    min-height: 100%;
     max-width: 100%;
     background-color: inherit;
-    height: 100%;
     margin-top: 60px;
     padding: 20px;
     text-align: left;
 }
 
-.back-section {
-    margin-bottom: 20px;
+.facts-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
 
 .back-button {
+    display: flex;
+    gap: 5px;
     color: #ffffff;
-    margin-top: 100px;
     background-color: inherit;
     outline: none !important;
     box-shadow: none !important;
     border: 0 !important; 
 }
+
+.back-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.country-flag {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    padding: 70px 0px;
+    box-sizing: border-box;
+  }
+
+  .country-details {
+    flex: 1;
+    padding: 30px;
+  }
+
+  .country-details h3 {
+    font-size: 50px;
+  }
+
+  .border-countries {
+    padding: 0;
+  }
