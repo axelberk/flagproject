@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./CountryCard.css"
+import { Link } from "react-router-dom";
 
 function CountryCard() {
   const [data, setData] = useState([]);
