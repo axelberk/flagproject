@@ -1,74 +1,82 @@
-.CountryPage {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    min-height: 100%;
-    max-width: 100%;
-    
-    background-color: inherit;
-    margin-top: 60px;
-    
-    text-align: left;
-    max-width: 100%;
-  
-    padding: 20px 10px;
-    box-sizing: border-box;
-}
+    .CountryPage {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 20px;
+        margin-top: 80px;
+        max-width: 100%;
+        background-color: inherit;
+        height: 100%;
+    }
 
-.facts-container {
-    display: flex;
-    flex-direction: row;
-}
+    .back-section {
+        align-self: flex-start; 
+        margin: 20px 0px; 
+    }
 
-.back-button {
-    display: flex;
-    gap: 5px;
-    color: #ffffff;
-    background-color: inherit;
-    outline: none !important;
-    box-shadow: none !important;
-    border: 0 !important; 
-}
+    .back-button {
+        display: flex;
+        align-items: flex-start;
+        gap: 5px;
+        color: #ffffff;
+        background-color: inherit;
+        outline: none !important;
+        border: none !important;
+        cursor: pointer;
+        padding: 5px;
+    }
 
-.back-section {
-    display: flex;
-    flex-direction: row;
-}
+    .country-flag {
+        max-width: 400px;
+        border-radius: 10px;
+        margin: 20px 0;
+    }
 
-.country-flag {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 10px;
-    padding: 80px 0px;
-    box-sizing: border-box;
-  }
+    .country-details {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        max-width: 600px;
+        padding: 0 20px;
+    }
 
-  .country-details {
-    flex: 1;
-    padding: 30px;
-  }
+    .facts-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+        gap: 20px
+    }
 
-  .country-details p {
-    margin-bottom: 9px;
-    margin-top: 0;
-    margin-right: 100px;
-  }
+    .facts {
+        text-align: left;
+    }
 
-  .country-details h3 {
-    font-size: 40px;
-    padding: 0;
-    margin-top: 40px;
-    margin-bottom: 18px;
-  }
+    .country-details h3 {
+        font-size: 36px;
+        margin: 20px 0;
+    }
 
-  .border-countries {
-    padding: 0;
-  }
+    .country-details p {
+        margin: 10px 0;
+    }
 
-  .facts-one {
-    
-    
-  }
+    .border-countries {
+        margin-top: 20px;
+    }
 
+    .border-country {
+        display: inline-block;
+        margin-right: 10px;
+        padding: 5px 10px;
+        background-color: #2b3844;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 16px;
+    }
 
-  
+    .border-country:hover {
+        background-color: #3c4d59;
+        color: #ffffff;
+    }
