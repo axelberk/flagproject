@@ -4,16 +4,20 @@
     justify-content: space-between;
     min-height: 100%;
     max-width: 100%;
+    
     background-color: inherit;
     margin-top: 60px;
-    padding: 20px;
+    
     text-align: left;
+    max-width: 100%;
+  
+    padding: 20px 10px;
+    box-sizing: border-box;
 }
 
 .facts-container {
     display: flex;
     flex-direction: row;
-    gap: 20px;
 }
 
 .back-button {
@@ -35,7 +39,7 @@
     width: 100%;
     max-width: 600px;
     border-radius: 10px;
-    padding: 70px 0px;
+    padding: 80px 0px;
     box-sizing: border-box;
   }
 
@@ -44,10 +48,27 @@
     padding: 30px;
   }
 
+  .country-details p {
+    margin-bottom: 9px;
+    margin-top: 0;
+    margin-right: 100px;
+  }
+
   .country-details h3 {
-    font-size: 50px;
+    font-size: 40px;
+    padding: 0;
+    margin-top: 40px;
+    margin-bottom: 18px;
   }
 
   .border-countries {
     padding: 0;
   }
+
+  .facts-one {
+    
+    
+  }
+
+
+  
