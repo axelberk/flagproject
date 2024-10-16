@@ -1,4 +1,4 @@
-    .CountryPage {
+   /*  .CountryPage {
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -7,12 +7,18 @@
         max-width: 100%;
         background-color: inherit;
         height: 100%;
-    }
+    } */
 
-    .back-section {
-        align-self: flex-start; 
-        margin: 20px 0px; 
-    }
+    .CountryPage {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        background-color: #202C36;
+        min-height: 100vh;
+        padding: 100px 200px;
+        box-sizing: border-box;
+        flex: 1;
+      }
 
     .back-button {
         display: flex;
@@ -24,12 +30,13 @@
         border: none !important;
         cursor: pointer;
         padding: 5px;
+        margin-bottom: 40px;
     }
 
     .country-flag {
         max-width: 400px;
         border-radius: 10px;
-        margin: 20px 0;
+        margin: 0px 0;
     }
 
     .country-details {
@@ -39,27 +46,27 @@
         width: 100%;
         max-width: 600px;
         padding: 0 20px;
+        margin-top: 30px;
     }
 
     .facts-container {
         display: flex;
-        flex-direction: row;
         justify-content: flex-start;
         width: 100%;
-        gap: 20px
-    }
-
-    .facts {
+        gap: 20px;
         text-align: left;
     }
 
+    
+
     .country-details h3 {
         font-size: 36px;
-        margin: 20px 0;
+        margin-bottom: 0;
+        margin-top: ;
     }
 
     .country-details p {
-        margin: 10px 0;
+        margin: 8px 0;
     }
 
     .border-countries {
