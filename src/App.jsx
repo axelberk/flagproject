@@ -11,7 +11,37 @@ import CountryCard from "./Components/CountryCard"
 import CountryPage from "./Components/CountryPage"
 
 function App() {
-  
+  const [countries, setCountries] = useState([])
+  const [filteredCountries, setFilteredCountries] = useState([])
+  const [searchQuery, setSearchQuery] = useState("")
+
+  useEffect(() => {
+    const fetchCountries = async () => {
+      try {
+        const response = await fetch("https://restcountries.com/v3.1/all");
+        const data = await response.json();
+
+         
+         const sortedCountries = data.sort((a, b) => 
+          a.name.common.localeCompare(b.name.common)
+        );
+
+        setCountries(sortedCountries);
+        setFilteredCountries(data);
+      } catch (error) {
+        console.error("Error fetching countries:", error);
+      }
+    };
+
+    fetchCountries();
+  }, []);
+
+  useEffect(() => {
+    const results = countries.filter(country =>
+      country.name.common.toLowerCase().includes(searchQuery.toLowerCase())
+    )
+    setFilteredCountries(results)
+  }, [searchQuery, countries])
 
   return (
     <BrowserRouter>
@@ -24,11 +54,11 @@ function App() {
           <HomePage>
             <div className='main-container'>
               <div className='filter-container'>
-                <Search />
+                <Search onSearch={setSearchQuery}/>
                 <Dropdown />
             
               </div>
-              <CountryCard />
+              <CountryCard countries={filteredCountries}/>
             </div>
           </HomePage>
         }
