@@ -2,7 +2,11 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 
-export default function Search() {
+export default function Search({onSearch}) {
+    const handleChange = (e) => {
+        onSearch(e.target.value)
+    }
+
   return (
     <Box
       component="form"
@@ -39,22 +43,9 @@ export default function Search() {
             color: '#f2f2f2', 
           },
         }}
+        onChange={handleChange}
       />
     </Box>
   );
 }
 
-/* import "./Search.css"
-
-const Search = () => {
-    return (
-        <div className="inputContainer">
-            <input type="text" id="search" className="SearchBar" placeholder=" "/>
-            <label className="SearchLabel" htmlFor="search">Search for a country...</label>
-            
-        </div>
-        
-    )
-}
-
-export default Search */
