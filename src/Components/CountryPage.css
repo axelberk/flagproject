@@ -63,10 +63,12 @@
 
     .country-details p {
         margin: 8px 0;
+        width: 200px;
     }
 
     .border-countries {
         margin-top: 20px;
+        text-align: left;
     }
 
     .border-country {
