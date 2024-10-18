@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FormControl, Select, MenuItem, InputLabel } from '@mui/material';
 
 const Dropdown = ({ onSelectRegion }) => {
-  const [selectedOption, setSelectedOption] = useState('All');
+  const [selectedOption, setSelectedOption] = useState('');
 
   const handleChange = (event) => {
     setSelectedOption(event.target.value);
@@ -31,7 +31,20 @@ const Dropdown = ({ onSelectRegion }) => {
         value={selectedOption}
         onChange={handleChange}
         label="Region"
-        sx={{ backgroundColor: '#202c36', color: '#f2f2f2', '& .MuiSelect-icon': { color: '#f2f2f2' } }}
+        sx={{ textAlign: "left", backgroundColor: '#202c36', color: '#f2f2f2', '& .MuiSelect-icon': { color: '#f2f2f2' } }}
+        MenuProps={{
+            PaperProps: {
+                sx: {
+                    backgroundColor: "#2b3844",
+                    "& MuiMenuItem-root": {
+                        color: "#f2f2f2",
+                        "&:hover": {
+                            backgroundColor: "#4b5562",
+                        }
+                    }
+                }
+            }
+        }}
       >
         <MenuItem value="All">All</MenuItem>
         <MenuItem value="Africa">Africa</MenuItem>
