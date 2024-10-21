@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { FormControl, Select, MenuItem, InputLabel } from '@mui/material';
+import React, { useState } from "react";
+import { FormControl, Select, MenuItem, InputLabel } from "@mui/material";
 
 const Dropdown = ({ onSelectRegion }) => {
-  const [selectedOption, setSelectedOption] = useState('');
+  const [selectedOption, setSelectedOption] = useState();
 
   const handleChange = (event) => {
     setSelectedOption(event.target.value);
@@ -22,7 +22,7 @@ const Dropdown = ({ onSelectRegion }) => {
     >
       <InputLabel 
         id="region-label" 
-        sx={{ color: selectedOption ? '#f2f2f2' : '#f2f2f288', '&.Mui-focused': { color: '#f2f2f2' } }}
+        sx={{ color: selectedOption ? "#f2f2f2" : "#f2f2f288", "&.Mui-focused": { color: "#f2f2f2" } }}
       >
         Region
       </InputLabel>
@@ -31,15 +31,21 @@ const Dropdown = ({ onSelectRegion }) => {
         value={selectedOption}
         onChange={handleChange}
         label="Region"
-        sx={{ textAlign: "left", backgroundColor: '#202c36', color: '#f2f2f2', '& .MuiSelect-icon': { color: '#f2f2f2' } }}
+        sx={{ textAlign: "left", backgroundColor: "#202c36", color: "#f2f2f2", "& .MuiSelect-icon": { color: "#f2f2f2" } }}
         MenuProps={{
             PaperProps: {
                 sx: {
                     backgroundColor: "#2b3844",
-                    "& MuiMenuItem-root": {
+                    "& .MuiMenuItem-root": { 
                         color: "#f2f2f2",
                         "&:hover": {
                             backgroundColor: "#4b5562",
+                        },
+                        "&.Mui-selected": {
+                            backgroundColor: "#4b5562",
+                            "&:hover": {
+                                backgroundColor: "#626c77"
+                            } 
                         }
                     }
                 }
