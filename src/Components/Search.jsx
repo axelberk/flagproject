@@ -13,7 +13,7 @@ export default function Search({onSearch}) {
       sx={{ 
         '& > :not(style)': { 
           
-          width: '300px', 
+          width: '260px', 
           '& .MuiOutlinedInput-root': {
             '& fieldset': {
               borderColor: '#f2f2f288',

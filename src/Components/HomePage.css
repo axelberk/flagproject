@@ -11,8 +11,7 @@
 
  .main-container {
   max-width: 100%;
-  margin-top: 30px;
-  padding: 20px 10px;
+  padding: 0px 10px;
   box-sizing: border-box;
 }
 
@@ -21,6 +20,6 @@
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  padding: 20px 175px;
+  padding: 10px 175px;
   box-sizing: border-box;
 }

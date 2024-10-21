@@ -33,6 +33,7 @@ const Dropdown = ({ onSelectRegion }) => {
         label="Region"
         sx={{ textAlign: "left", backgroundColor: "#202c36", color: "#f2f2f2", "& .MuiSelect-icon": { color: "#f2f2f2" } }}
         MenuProps={{
+           
             PaperProps: {
                 sx: {
                     backgroundColor: "#2b3844",
