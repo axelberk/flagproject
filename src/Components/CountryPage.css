@@ -14,7 +14,7 @@
         flex-direction: row;
         width: 100%;
         background-color: #202C36;
-        min-height: 100vh;
+        min-height: 100%;
         padding: 30px 200px;
         box-sizing: border-box;
         flex: 1;
@@ -29,14 +29,18 @@
         outline: none !important;
         border: none !important;
         cursor: pointer;
-        padding: 5px;
+        padding: 10px 10px;
         margin-bottom: 40px;
+        border-radius: 4px;
     }
 
     .country-flag {
-        max-width: 500px;
+        width: 100%;
+        width: 600px;
         border-radius: 10px;
         margin: 0px 0;
+        height: auto;
+        min-height: 250px;
     }
 
     .country-details {
@@ -45,7 +49,7 @@
         align-items: flex-start;
         width: 100%;
         max-width: 600px;
-        padding: 30px 60px;
+        padding: 36px 60px;
     }
 
     .facts-container {
@@ -74,6 +78,7 @@
     .border-country {
         display: inline-block;
         margin-right: 10px;
+        margin-bottom: 7px;
         padding: 5px 10px;
         background-color: #2b3844;
         color: #fff;
