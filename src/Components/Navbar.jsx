@@ -1,5 +1,6 @@
 import "./Navbar.css"
 import Brightness7SharpIcon from '@mui/icons-material/Brightness7Sharp';
+import "./ThemeContext";
 
 
 const Navbar = () => {
@@ -7,7 +8,7 @@ const Navbar = () => {
         <div className="Navbar">
             <a href="/" className="NavbarLink">Countries of the World</a>
             <img className="Logo" src="/logo.png" alt="" />
-            <button className="light-dark">
+            <button className="light-dark" >
                 <Brightness7SharpIcon className="bright-icon"></Brightness7SharpIcon>Dark Mode
             </button>
         </div>

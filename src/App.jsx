@@ -4,7 +4,7 @@ import './App.css'
 import Navbar from "./Components/Navbar"
 import HomePage from "./Components/HomePage"
 import CountryPage from "./Components/CountryPage"
-
+import "./Components/ThemeContext"
 
 function App() {
   return (
