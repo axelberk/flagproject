@@ -25,7 +25,8 @@ const CountryPage = () => {
     fetchCountryData();
   }, [countrycode]);
 
- 
+  
+
   return (
     <div className="CountryPage">
     <div className="left-section">
@@ -37,21 +38,27 @@ const CountryPage = () => {
           </button>
         </Link>
       </div>
-      <img src={countryData.flags?.svg} alt={`${countryData.name?.common || 'Flag'}`} className="country-flag"/>
+      {loading ? (
+        <Skeleton width={560} height={370} baseColor="#f2f2f288" borderRadius={10}/>
+      ): (
+        <img src={countryData.flags?.svg} alt={`${countryData.name?.common}`} className="country-flag"/>
+      )}
+      
     </div>
     <div className="country-details">
-      <h3>{countryData.name?.common}</h3>
+      <h3>{loading ? <Skeleton width={300} baseColor="#f2f2f288"/> : countryData.name?.common}</h3>
+
       <div className="facts-container">
         <div className="facts-one">
-          <p><strong>Population: </strong>{countryData.population?.toLocaleString() || 'N/A'}</p>
-          <p><strong>Region: </strong>{countryData.region || 'N/A'}</p>
-          <p><strong>Capital: </strong>{countryData.capital?.[0] || 'N/A'}</p>
-          <p><strong>Native name: </strong>{Object.values(countryData.name?.nativeName || {})[0]?.common || 'N/A'}</p>
+          <p><strong>Population: </strong>{loading ? <Skeleton width={100} baseColor="#f2f2f288"/> : countryData.population?.toLocaleString() || 'N/A'}</p>
+          <p><strong>Region: </strong>{loading ? <Skeleton width={50} baseColor="#f2f2f288"/> : countryData.region || 'N/A'}</p>
+          <p><strong>Capital: </strong>{loading ? <Skeleton width={100} baseColor="#f2f2f288"/> : Object.values(countryData.capital || {}).join(", ") || 'N/A'}</p>
+          <p><strong>Native name: </strong>{loading ? <Skeleton width={100} baseColor="#f2f2f288"/> : Object.values(countryData.name?.nativeName || {})[0]?.common || 'N/A'}</p>
         </div>
         <div className="facts-two">
-          <p><strong>Top Level Domain: </strong>{countryData.tld?.join(', ') || 'N/A'}</p>
-          <p><strong>Currencies: </strong>{Object.values(countryData.currencies || {})[0]?.name || 'N/A'}</p>
-          <p><strong>Language: </strong>{Object.values(countryData.languages || {}).join(', ') || 'N/A'}</p>
+          <p><strong>Top Level Domain: </strong>{loading ? <Skeleton width={100} baseColor="#f2f2f288"/> : countryData.tld?.join(', ') || 'N/A'}</p>
+          <p><strong>Currencies: </strong>{loading ? <Skeleton width={100} baseColor="#f2f2f288"/> : Object.values(countryData.currencies || {})[0]?.name || 'N/A'}</p>
+          <p><strong>Language: </strong>{loading ? <Skeleton width={100} baseColor="#f2f2f288"/> : Object.values(countryData.languages || {}).join(", ") || 'N/A'}</p>
         </div>
       </div>
       <div className="border-countries">
