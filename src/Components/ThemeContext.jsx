@@ -1,4 +1,4 @@
-/* import React, { useState, useEffect, createContext } from 'react';
+import React, { useState, useEffect, createContext } from 'react';
 
 export const ThemeContext = createContext();
 
@@ -20,4 +20,3 @@ export const ThemeProvider = ({ children }) => {
     </ThemeContext.Provider>
   );
 };
- */
