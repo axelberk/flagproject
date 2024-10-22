@@ -3,12 +3,15 @@ import Search from "./Search";
 import Dropdown from "./Dropdown";
 import CountryCard from "./CountryCard";
 import "./HomePage.css";
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 const HomePage = () => {
   const [countries, setCountries] = useState([]);
   const [filteredCountries, setFilteredCountries] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("All");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchCountries = async () => {
@@ -38,7 +41,7 @@ const HomePage = () => {
         country.name.common.toLowerCase().includes(searchQuery.toLowerCase())
       );
     }
-    
+
     if (selectedRegion !== "All") {
       results = results.filter((country) => country.region === selectedRegion);
     }

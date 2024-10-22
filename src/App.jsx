@@ -5,6 +5,7 @@ import Navbar from "./Components/Navbar"
 import HomePage from "./Components/HomePage"
 import CountryPage from "./Components/CountryPage"
 
+
 function App() {
   return (
     <BrowserRouter>

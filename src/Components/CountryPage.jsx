@@ -2,10 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./CountryPage.css";
 import { useParams, Link } from "react-router-dom";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 const CountryPage = () => {
   const { countrycode } = useParams();
-  const [countryData, setCountryData] = useState(null);
+  const [countryData, setCountryData] = useState(true);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -23,14 +25,7 @@ const CountryPage = () => {
     fetchCountryData();
   }, [countrycode]);
 
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (!countryData) {
-    return <div>Country not found</div>;
-  }
-
+ 
   return (
     <div className="CountryPage">
     <div className="left-section">
@@ -45,7 +40,7 @@ const CountryPage = () => {
       <img src={countryData.flags?.svg} alt={`${countryData.name?.common || 'Flag'}`} className="country-flag"/>
     </div>
     <div className="country-details">
-      <h3>{countryData.name?.common || 'No country name available'}</h3>
+      <h3>{countryData.name?.common}</h3>
       <div className="facts-container">
         <div className="facts-one">
           <p><strong>Population: </strong>{countryData.population?.toLocaleString() || 'N/A'}</p>
