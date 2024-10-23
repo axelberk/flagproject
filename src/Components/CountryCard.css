@@ -5,22 +5,22 @@
     padding: 15px;
     margin-left: 160px;
     margin-right: 160px;
+    height: 100vh;
 }
 
 .card {
-    background-color: #2b3844;
-    color: #f2f2f2;
+    
+    /* color: #f2f2f2; */
     border-radius: 4px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.2s;
     height: 285px;
     text-align: left;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
 }
 
 .card:hover {
     cursor: pointer;
-    background-color: rgb(55, 69, 82);
 }
 
 .flag {
