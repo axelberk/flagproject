@@ -4,19 +4,21 @@ import './App.css'
 import Navbar from "./Components/Navbar"
 import HomePage from "./Components/HomePage"
 import CountryPage from "./Components/CountryPage"
-import "./Components/ThemeContext"
+import { ThemeProvider } from './Components/ThemeContext';
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className='App'>
-        <Navbar/>
-        <Routes>
-          <Route path='/' element={<HomePage />} />
-          <Route path='/country/:countrycode' element={<CountryPage />} />
-        </Routes>
-      </div>
-    </BrowserRouter>  
+    <ThemeProvider>
+      <BrowserRouter>
+        <div className='App'>
+          <Navbar/>
+          <Routes>
+            <Route path='/' element={<HomePage />} />
+            <Route path='/country/:countrycode' element={<CountryPage />} />
+          </Routes>
+        </div>
+      </BrowserRouter>
+    </ThemeProvider>  
   )
 }
 

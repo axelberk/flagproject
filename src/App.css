@@ -18,30 +18,33 @@
     scrollbar-gutter: stable;
   }
 
-  /* body {
-    background-color: var(--background-color);
-    color: var(--color)
+  body.light {
+    background-color: #f2f2f2;
+    color: black;
+    --navbar-background-color: #2b3844; /* Lighter color for the navbar */
+    --navbar-text-color: #f2f2f2; /* Darker text color for the navbar */
   }
- */
-  button {
-    background-color: var(--button-background);
-    color: var(--button-text-color);
+
+  body.dark {
+    background-color: #202c36;
+    color: #f2f2f2;
   }
+
   
-  #root {
+
+  /* [data-theme="light"] {
+    --background-color: #ffffff;
+    --color: #f2f2f2;
+    --button-background: #202c36;
+    --button-text-color: #ffffff
+  } */
+
+ #root {
     height: 100%;
     width: 100%;
     text-align: center;
     
   }
-
-  [data-theme="light"] {
-    --background-color: #ffffff;
-    --color: #f2f2f2;
-    --button-background: #202c36;
-    --button-text-color: #ffffff
-  }
-
   
   @media (max-width: 768px) {
     .filter-container {
