@@ -11,7 +11,7 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #202c36;
+    
     color: #f2f2f2;
     text-align: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -21,23 +21,25 @@
   body.light {
     background-color: #f2f2f2;
     color: black;
-    --navbar-background-color: #2b3844; /* Lighter color for the navbar */
-    --navbar-text-color: #f2f2f2; /* Darker text color for the navbar */
+    --countrypage-background-color: #f2f2f2;
+    --countrypage-text-color: black;
+  }
+
+  body.light button {
+    background-color: inherit;
+    color: black;
+  }
+
+  body.light button:hover {
+    background-color: rgb(221, 221, 221);
   }
 
   body.dark {
-    background-color: #202c36;
+    background-color: #202C36;
     color: #f2f2f2;
+    --navbar-background-color: #2B3844;
+    --navbar-text-color: #f2f2f2;
   }
-
-  
-
-  /* [data-theme="light"] {
-    --background-color: #ffffff;
-    --color: #f2f2f2;
-    --button-background: #202c36;
-    --button-text-color: #ffffff
-  } */
 
  #root {
     height: 100%;
