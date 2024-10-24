@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FormControl, Select, MenuItem, InputLabel } from "@mui/material";
 import { useContext } from "react";
-import ThemeProvider from "./ThemeContext";
+import { ThemeContext } from "./ThemeContext";
 
 const Dropdown = ({ onSelectRegion }) => {
   const [selectedOption, setSelectedOption] = useState();
@@ -12,20 +12,32 @@ const Dropdown = ({ onSelectRegion }) => {
     onSelectRegion(event.target.value);
   };
 
+  const styles = {
+    backgroundColor: theme === "dark" ? "#202c33" : "white",
+    color: theme === "dark" ? "#f2f2f2" : "black",
+    borderColor: theme === "dark" ? "#f2f2f288" : "gray",
+    hoverBorderColor: theme === "dark" ? "#f2f2f2" : "black",
+    menuBackgroundColor: theme === "dark" ? "#2b3844" : "#fff",
+    menuItemHoverBackgroundColor: theme === "dark" ? "#4b5562" : "rgb(221, 221, 221)",
+    menuItemSelectedBackgroundColor: theme === "dark" ? "#4b5562" : "rgb(221, 221, 221)",
+    menuItemSelectedHoverBackgroundColor: theme === "dark" ? "#626c77" : "rgb(221, 221, 221)",
+}
+
   return (
     <FormControl
       variant="outlined"
       sx={{ minWidth: 150, position: 'relative', marginRight: '5px', '& .MuiOutlinedInput-root': {
-          '& fieldset': { borderColor: '#f2f2f288' },
-          '&:hover fieldset': { borderColor: '#f2f2f2' },
-          '&.Mui-focused fieldset': { borderColor: '#f2f2f2' },
+        backgroundColor: styles.backgroundColor, color: styles.color,
+          '& fieldset': { borderColor: styles.borderColor, color: styles.color },
+          '&:hover fieldset': { borderColor: styles.borderColor },
+          '&.Mui-focused fieldset': { borderColor: styles.borderColor },
           
         },
       }}
     >
       <InputLabel 
         id="region-label" 
-        sx={{ color: selectedOption ? "#f2f2f2" : "#f2f2f288", "&.Mui-focused": { color: "#f2f2f2" } }}
+        sx={{ color: selectedOption ? styles.color : `{$styles.color}88`, "&.Mui-focused": { color: styles.color } }}
       >
         Region
       </InputLabel>
@@ -34,21 +46,21 @@ const Dropdown = ({ onSelectRegion }) => {
         value={selectedOption}
         onChange={handleChange}
         label="Region"
-        sx={{ textAlign: "left", backgroundColor: "#202c36", color: "#f2f2f2", "& .MuiSelect-icon": { color: "#f2f2f2" } }}
+        sx={{ textAlign: "left", backgroundColor: styles.backgroundColor, color: styles.color, "& .MuiSelect-icon": { color: styles.color } }}
         MenuProps={{
            
             PaperProps: {
                 sx: {
-                    backgroundColor: "#2b3844",
+                    backgroundColor: styles.menuBackgroundColor,
                     "& .MuiMenuItem-root": { 
-                        color: "#f2f2f2",
+                        color: styles.color,
                         "&:hover": {
-                            backgroundColor: "#4b5562",
+                            backgroundColor: styles.menuItemHoverBackgroundColor,
                         },
                         "&.Mui-selected": {
-                            backgroundColor: "#4b5562",
+                            backgroundColor: styles.menuItemSelectedBackgroundColor,
                             "&:hover": {
-                                backgroundColor: "#626c77"
+                                backgroundColor: styles.menuItemSelectedHoverBackgroundColor
                             } 
                         }
                     }
