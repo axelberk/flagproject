@@ -7,10 +7,11 @@ import { ThemeContext } from "../Components/ThemeContext";;
 
 const Navbar = () => {
     const {theme, toggleTheme} = useContext(ThemeContext)
+    const logoSrc = theme === "light" ? "/logo-dark.png" : "logo.png";
     return (
         <div className="Navbar">
             <a href="/" className="NavbarLink">Countries of the World</a>
-            <img className="Logo" src="/logo.png" alt="" />
+            <img className="Logo" src={logoSrc} alt="" />
             <button className="light-dark" onClick={toggleTheme}>
                 <Brightness7SharpIcon className="bright-icon"></Brightness7SharpIcon>{theme === 'light' ? 'Dark' : 'Light'} Mode
             </button>
