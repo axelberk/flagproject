@@ -35,9 +35,9 @@ const Dropdown = ({ onSelectRegion }) => {
         },
       }}
     >
-      <InputLabel 
+      <InputLabel
         id="region-label" 
-        sx={{ color: selectedOption ? styles.color : `{$styles.color}88`, "&.Mui-focused": { color: styles.color } }}
+        sx={{ color: selectedOption ? styles.color : `${styles.color}88`, "&.Mui-focused": { color: styles.color } }}
       >
         Region
       </InputLabel>

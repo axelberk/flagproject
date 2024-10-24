@@ -1,15 +1,26 @@
 import * as React from 'react';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import { Typography } from '@mui/material';
 import { ThemeContext } from './ThemeContext';
 
-export default function Search({onSearch}) {
+export default function Search({onSearch, searchResults}) {
     const {theme} = useContext(ThemeContext);
+    const [noResults, setNoResults] = useState(false)
 
     const handleChange = (e) => {
-        onSearch(e.target.value)
+        const searchTerm = e.target.value
+        onSearch(searchTerm)
+
+        if (searchTerm && searchResults && searchResults.length === 0) {
+            setNoResults(true)
+        } else {
+            setNoResults(false)
+        }
     }
+
+    
 
   return (
     <Box
@@ -49,6 +60,16 @@ export default function Search({onSearch}) {
         }}
         onChange={handleChange}
       />
+
+      {noResults && (
+        <Typography
+        sx={{color: theme === "dark" ? "#f2f2f2" : "black",
+            marginTop: "8px",
+            fontStyle: "italic"
+        }}>
+
+        </Typography>
+      )}
     </Box>
   );
 }
