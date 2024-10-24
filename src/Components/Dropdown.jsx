@@ -29,7 +29,7 @@ const Dropdown = ({ onSelectRegion }) => {
       sx={{ minWidth: 150, position: 'relative', marginRight: '5px', '& .MuiOutlinedInput-root': {
         backgroundColor: styles.backgroundColor, color: styles.color,
           '& fieldset': { borderColor: styles.borderColor, color: styles.color },
-          '&:hover fieldset': { borderColor: styles.borderColor },
+          '&:hover fieldset': { borderColor: styles.hoverBorderColor },
           '&.Mui-focused fieldset': { borderColor: styles.borderColor },
           
         },
