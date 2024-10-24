@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { FormControl, Select, MenuItem, InputLabel } from "@mui/material";
+import { useContext } from "react";
+import ThemeProvider from "./ThemeContext";
 
 const Dropdown = ({ onSelectRegion }) => {
   const [selectedOption, setSelectedOption] = useState();
+  const {theme} = useContext(ThemeContext);
 
   const handleChange = (event) => {
     setSelectedOption(event.target.value);

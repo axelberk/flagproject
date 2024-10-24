@@ -1,9 +1,12 @@
 import * as React from 'react';
+import { useContext } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-
+import { ThemeContext } from './ThemeContext';
 
 export default function Search({onSearch}) {
+    const {theme} = useContext(ThemeContext);
+
     const handleChange = (e) => {
         onSearch(e.target.value)
     }
@@ -17,13 +20,13 @@ export default function Search({onSearch}) {
           width: '260px', 
           '& .MuiOutlinedInput-root': {
             '& fieldset': {
-              borderColor: '#f2f2f288',
+              borderColor: theme === "dark" ? '#f2f2f288' : "#black",
             },
             '&:hover fieldset': {
-              borderColor: '#f2f2f2',
+              borderColor: theme === "dark" ? '#f2f2f2' : "black",
             },
             '&.Mui-focused fieldset': {
-              borderColor: '#f2f2f2',
+              borderColor: theme === "dark" ? '#f2f2f2' : "black",
             },
           },
         }
@@ -36,12 +39,12 @@ export default function Search({onSearch}) {
         label="Search for a country..." 
         variant="outlined" 
         sx={{
-          input: { color: '#f2f2f2' }, 
+          input: { color: theme === "dark" ? '#f2f2f2' : 'black' }, 
           '& .MuiInputLabel-root': { 
-            color: '#f2f2f288', 
+            color: theme === "dark" ? '#f2f2f288' : "gray", 
           },
           '& .MuiInputLabel-root.Mui-focused': {
-            color: '#f2f2f2', 
+            color: theme === "dark" ? '#f2f2f2' : 'black', 
           },
         }}
         onChange={handleChange}
