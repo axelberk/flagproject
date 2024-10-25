@@ -1,8 +1,8 @@
 import "./Navbar.css"
 import Brightness7SharpIcon from '@mui/icons-material/Brightness7Sharp';
-import "./ThemeContext";
+import "../ThemeContext";
 import { useContext } from "react";
-import { ThemeContext } from "../Components/ThemeContext";;
+import { ThemeContext } from "../ThemeContext";;
 
 
 const Navbar = () => {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import Search from "./Search";
-import Dropdown from "./Dropdown";
-import CountryCard from "./CountryCard";
+import Search from "../Search";
+import Dropdown from "../Dropdown";
+import CountryCard from "../CountryCard/CountryCard";
 import { Typography } from "@mui/material";
 import "./HomePage.css";
 
