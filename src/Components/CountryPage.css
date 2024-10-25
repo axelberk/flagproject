@@ -121,9 +121,9 @@
         }
      }
 
-     @media (min-width: 820px) and (max-width: 1024px) {
+     @media (min-width: 768px) and (max-width: 1440px) {
         .CountryPage {
-            padding: 20px;
+            
             flex-direction: column;
         }
 
@@ -133,7 +133,7 @@
 
         .country-details {
             padding: 10px;
-            align-items: ce;
+            gap:10px;
         }
 
         .country-details h3 {
@@ -141,7 +141,22 @@
         }
 
         .facts-container {
-            gap: 0;
+            gap: 70px;
         }
      }
      
+     @media (max-width: 900px) {
+        .CountryPage {
+            flex-direction: column;
+        }
+
+        .country-details {
+            padding: 0;
+        }
+     }
+
+     @media (min-width: 769px) and (max-width: 1024px) {
+        .CountryPage {
+            padding: 20px;
+        }
+     }

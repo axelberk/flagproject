@@ -51,18 +51,28 @@ button:hover {
         padding: 20px;
         margin-right: 0;
     }
+}
 
-    .Logo {
-        display: none;
-    }
-
-    body {
-        margin-top: 0;
+@media (min-width: 375px) and (max-width: 1440px) {
+    .Navbar {
+        padding: 20px;
     }
 }
 
-@media (min-width: 820px) {
+@media (max-width: 990px) {
+    .Logo {
+        display: none;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1320px) {
     .Navbar {
-        padding: 20px;
+        padding: 20px
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .Navbar {
+        padding: 30px 200px;
     }
 }

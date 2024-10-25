@@ -50,7 +50,7 @@
 
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1440px) {
   .HomePage {
     padding: 10px;
   }
@@ -64,5 +64,11 @@
     align-items: flex-start;
     padding: 0px;
     margin-right: 0;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .filter-container {
+    padding: 30px 185px;
   }
 }
