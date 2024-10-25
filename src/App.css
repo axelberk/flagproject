@@ -86,7 +86,7 @@
 
  
   
-  @media (max-width: 375px) {
+  @media (max-width: 768px) {
     #root {
       width: 100%;
       min-height: 100vh;
@@ -94,7 +94,7 @@
 
     .App {
       width: 100%;
-      max-width: 100vh;
+      
     }
 
     body {

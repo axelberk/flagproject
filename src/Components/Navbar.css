@@ -45,12 +45,18 @@ button:hover {
     color: inherit;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
     .Navbar {
-        width: 100vh;
+        width: 100%;
+        padding: 20px;
+        margin-right: 0;
     }
 
     .Logo {
         display: none;
+    }
+
+    body {
+        margin-top: 0;
     }
 }

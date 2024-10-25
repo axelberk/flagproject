@@ -53,9 +53,17 @@
     color: #f2f2f2cc;
 }
 
-@media (max-width: 375px) {
-    .CountryCard {
-        width: 2px;
-
+@media (max-width: 768px) {
+    .cards-grid {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 20px;
     }
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+

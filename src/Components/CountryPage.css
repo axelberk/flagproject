@@ -96,3 +96,9 @@
         background-color: #3c4d59;
         color: #ffffff;
     }
+
+     @media (max-width: 768px) {
+        .flag {
+            
+        }
+     }
