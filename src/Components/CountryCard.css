@@ -53,3 +53,9 @@
     color: #f2f2f2cc;
 }
 
+@media (max-width: 375px) {
+    .CountryCard {
+        width: 2px;
+
+    }
+}

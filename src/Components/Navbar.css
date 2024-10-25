@@ -44,3 +44,13 @@ button:hover {
 .NavbarLink:hover {
     color: inherit;
 }
+
+@media (max-width: 375px) {
+    .Navbar {
+        width: 100vh;
+    }
+
+    .Logo {
+        display: none;
+    }
+}
