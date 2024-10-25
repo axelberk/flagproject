@@ -31,12 +31,12 @@ const CountryPage = () => {
     <div className="CountryPage">
     <div className="left-section">
       <div className="back-section">
-        <Link to="/">
+        <a href="/">
           <button className="back-button">
             <ArrowBackIcon></ArrowBackIcon>
             Back
           </button>
-        </Link>
+        </a>
       </div>
       {loading ? (
         <Skeleton width={560} height={370} baseColor="#f2f2f288" borderRadius={10}/>

@@ -20,6 +20,16 @@
         flex: 1;
       }
 
+      .back-section {
+        width: fit-content; /* This is crucial - limits the clickable area */
+        margin-bottom: 1rem;
+      }
+      
+      .back-section a {
+        text-decoration: none;
+        width: fit-content;
+      }
+
     .left-section {
         margin: 0;
     }

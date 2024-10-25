@@ -29,7 +29,7 @@ export default function Search({ onSearch, searchResults }) {
             component="form"
             sx={{
                 '& > :not(style)': {
-                    width: '260px',
+                    width: '330px',
                     '& .MuiOutlinedInput-root': {
                         '& fieldset': {
                             borderColor: theme === "dark" ? '#f2f2f288' : "#black",
@@ -47,6 +47,7 @@ export default function Search({ onSearch, searchResults }) {
             autoComplete="off"
         >
             <TextField
+            fullWidth
                 id="outlined-basic"
                 label="Search for a country..."
                 variant="outlined"
