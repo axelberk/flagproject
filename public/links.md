@@ -1,0 +1,2 @@
+- [Github repository](https://github.com/axelberk/flagproject)
+- [Deployat projekt](https://ditt-projekt-här)

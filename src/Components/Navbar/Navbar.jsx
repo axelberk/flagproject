@@ -1,5 +1,6 @@
 import "./Navbar.css"
 import Brightness7SharpIcon from '@mui/icons-material/Brightness7Sharp';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
 import "../ThemeContext";
 import { useContext } from "react";
 import { ThemeContext } from "../ThemeContext";;
@@ -13,7 +14,17 @@ const Navbar = () => {
             <a href="/" className="NavbarLink">Countries of the World</a>
             <img className="Logo" src={logoSrc} alt="" />
             <button className="light-dark" onClick={toggleTheme}>
-                <Brightness7SharpIcon className="bright-icon"></Brightness7SharpIcon>{theme === 'light' ? 'Dark' : 'Light'} Mode
+                {theme === 'light' ? (
+                    <>
+                    <Brightness4Icon className="mode-icon" />
+                    Dark Mode
+                    </>
+                ) : (
+                    <>
+                    <Brightness7SharpIcon className="mode-icon" />
+                    Light Mode
+                    </>
+                )}
             </button>
         </div>
     )

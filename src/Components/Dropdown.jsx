@@ -17,6 +17,7 @@ const Dropdown = ({ onSelectRegion }) => {
     color: theme === "dark" ? "#f2f2f2" : "black",
     borderColor: theme === "dark" ? "#f2f2f288" : "gray",
     hoverBorderColor: theme === "dark" ? "#f2f2f2" : "black",
+    focusedBorderColor: theme === "dark" ? "white" : "black",
     menuBackgroundColor: theme === "dark" ? "#2b3844" : "#fff",
     menuItemHoverBackgroundColor: theme === "dark" ? "#4b5562" : "rgb(221, 221, 221)",
     menuItemSelectedBackgroundColor: theme === "dark" ? "#4b5562" : "rgb(221, 221, 221)",
@@ -30,7 +31,7 @@ const Dropdown = ({ onSelectRegion }) => {
         backgroundColor: styles.backgroundColor, color: styles.color,
           '& fieldset': { borderColor: styles.borderColor, color: styles.color },
           '&:hover fieldset': { borderColor: styles.hoverBorderColor },
-          '&.Mui-focused fieldset': { borderColor: styles.borderColor },
+          '&.Mui-focused fieldset': { borderColor: styles.focusedBorderColor },
           
         },
       }}
