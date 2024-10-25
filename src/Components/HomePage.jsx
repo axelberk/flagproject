@@ -2,16 +2,14 @@ import React, { useState, useEffect } from "react";
 import Search from "./Search";
 import Dropdown from "./Dropdown";
 import CountryCard from "./CountryCard";
+import { Typography } from "@mui/material";
 import "./HomePage.css";
-import Skeleton from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
 
 const HomePage = () => {
   const [countries, setCountries] = useState([]);
   const [filteredCountries, setFilteredCountries] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedRegion, setSelectedRegion] = useState("All");
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchCountries = async () => {
@@ -49,14 +47,32 @@ const HomePage = () => {
     setFilteredCountries(results);
   }, [searchQuery, selectedRegion, countries]);
 
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+  };
+
   return (
     <div className="HomePage">
       <div className="main-container">
         <div className="filter-container">
-          <Search onSearch={setSearchQuery} />
+          <Search onSearch={handleSearch} searchResults={filteredCountries} />
           <Dropdown onSelectRegion={setSelectedRegion} />
         </div>
-        <CountryCard countries={filteredCountries} />
+
+        {filteredCountries.length === 0 && searchQuery ? (
+          <Typography
+            sx={{
+              color: "white",
+              marginTop: "16px",
+              fontStyle: "italic",
+              textAlign: "center",
+            }}
+          >
+            No countries found.
+          </Typography>
+        ) : (
+          <CountryCard countries={filteredCountries} />
+        )}
       </div>
     </div>
   );
