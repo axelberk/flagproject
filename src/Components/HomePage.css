@@ -49,3 +49,20 @@
   }
 
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .HomePage {
+    padding: 10px;
+  }
+
+  .main-container {
+    padding: 0;
+  }
+
+  .filter-container {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    margin-right: 0;
+  }
+}

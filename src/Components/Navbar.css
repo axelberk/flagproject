@@ -60,3 +60,9 @@ button:hover {
         margin-top: 0;
     }
 }
+
+@media (min-width: 820px) {
+    .Navbar {
+        padding: 20px;
+    }
+}

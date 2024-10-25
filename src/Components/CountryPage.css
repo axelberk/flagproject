@@ -98,7 +98,50 @@
     }
 
      @media (max-width: 768px) {
-        .flag {
-            
+        .CountryPage {
+            padding: 10px;
+            flex-direction: column;
+        }
+
+        .CountryPage button {
+            margin-bottom: 15px;
+        }
+
+        .country-details {
+            padding: 10px;
+        }
+
+        .country-details h3 {
+            margin: 0;
+        }
+
+        .facts-container {
+            flex-direction: column;
+            gap: 0;
         }
      }
+
+     @media (min-width: 820px) and (max-width: 1024px) {
+        .CountryPage {
+            padding: 20px;
+            flex-direction: column;
+        }
+
+        .CountryPage button {
+            margin-bottom: 15px;
+        }
+
+        .country-details {
+            padding: 10px;
+            align-items: ce;
+        }
+
+        .country-details h3 {
+            margin: 0;
+        }
+
+        .facts-container {
+            gap: 0;
+        }
+     }
+     
