@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useContext, useState } from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import { Typography } from '@mui/material';
 import { ThemeContext } from './ThemeContext';
 
 export default function Search({ onSearch, searchResults }) {
@@ -11,8 +12,8 @@ export default function Search({ onSearch, searchResults }) {
 
     const handleChange = (e) => {
         const searchTerm = e.target.value;
-        setSearchTerm(searchTerm);
-        onSearch(searchTerm);
+        setSearchTerm(searchTerm); 
+        onSearch(searchTerm); 
     };
 
     React.useEffect(() => {
