@@ -8,7 +8,7 @@ import { ThemeContext } from "../ThemeContext";;
 
 const Navbar = () => {
     const {theme, toggleTheme} = useContext(ThemeContext)
-    const logoSrc = theme === "light" ? "/logo-dark.png" : "logo.png";
+    const logoSrc = theme === "light" ? "/logo-dark.png" : "/logo.png";
     return (
         <div className="Navbar">
             <a href="/" className="NavbarLink">Countries of the World</a>
@@ -17,12 +17,12 @@ const Navbar = () => {
                 {theme === 'light' ? (
                     <>
                     <Brightness4Icon className="mode-icon" />
-                    Dark Mode
+                    Light Mode
                     </>
                 ) : (
                     <>
                     <Brightness7SharpIcon className="mode-icon" />
-                    Light Mode
+                    Dark Mode
                     </>
                 )}
             </button>

@@ -21,7 +21,7 @@
       }
 
       .back-section {
-        width: fit-content; /* This is crucial - limits the clickable area */
+        width: fit-content;
         margin-bottom: 1rem;
       }
       
@@ -36,7 +36,7 @@
 
     .back-button {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         gap: 5px;
         color: #ffffff;
         background-color: inherit;
