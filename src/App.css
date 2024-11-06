@@ -10,7 +10,7 @@
   min-height: 100vh;
   position: relative;
   max-width: 100%;
-  overflow-x: hidden;
+  
 }
 
   html, body {
@@ -89,15 +89,18 @@
     #root {
       width: 100%;
       min-height: 100vh;
+      margin-top: 0;
     }
 
     .App {
       width: 100%;
+      margin-top: 0;
+
     }
 
     body {
       width: 100%;
-      overflow-x: hidden;
+      
     }
   }
 
@@ -108,6 +111,8 @@
     }
   }
   
-  
-
-  
+  /* @media (min-width: 769px) {
+    .App {
+      margin-top: 60px;
+    }
+  } */

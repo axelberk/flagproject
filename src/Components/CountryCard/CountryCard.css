@@ -6,6 +6,7 @@
     margin-left: 160px;
     margin-right: 160px;
     height: 100%;
+    
 }
 
 .card {
@@ -58,6 +59,7 @@
         margin-left: 0;
         margin-right: 0;
         padding: 0 20px;
+        
     }
 }
 
@@ -73,5 +75,6 @@
 @media (min-width: 1024px) and (max-width: 1440px) {
     .cards-grid {
         padding: 10px 190px;
+        
     }
 }
