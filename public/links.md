@@ -1,2 +1,2 @@
 - [Github repository](https://github.com/axelberk/flagproject)
-- [Deployat projekt](https://ditt-projekt-här)
+- [Deployat projekt](https://countryfactbase.netlify.app/)

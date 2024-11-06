@@ -10,7 +10,6 @@
   min-height: 100vh;
   position: relative;
   max-width: 100%;
-  overflow-x: hidden;
 }
 
   html, body {
